@@ -6,6 +6,10 @@ extern Yuna::Application *Yuna::CreateApplication();
 
 int main(int argc, char** argv)
 {
+	Yuna::Log::Init();
+	YU_CORE_WARN("Initialized Log!");
+	YU_INFO("Hello from the {0} system", 1707);
+
 	auto app = Yuna::CreateApplication();
 	app->Run();
 	delete app;
